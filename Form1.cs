@@ -35,7 +35,44 @@ namespace Repentance_Configuration_Tool
 
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
         {
-            isaacLocation = openFileDialog2.InitialDirectory;
+            string isaacFullLocation = openFileDialog2.FileName;
+            string isaacFileName = "\\isaac-ng.exe";
+            int index = isaacFullLocation.IndexOf(isaacFileName);
+            isaacLocation = isaacFullLocation.Replace(isaacFileName,"");
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+            //MessageBox.Show(domainUpDown1.Text+" Numer indeksu: "+domainUpDown1.SelectedIndex);
+        }
+        private void disableAllModsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+            }
+        }
+        private void enableAllModsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                checkedListBox1.SetItemChecked(i, true);
+            }
+        }
+
+        private void inverseModsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            for (int i = 0; i < checkedListBox1.Items.Count; i++)
+            {
+                if(checkedListBox1.GetItemChecked(i) == true)
+                {
+                    checkedListBox1.SetItemChecked(i, false);
+                }
+                else
+                {
+                    checkedListBox1.SetItemChecked(i, true);
+                }
+            }
         }
     }
 }
