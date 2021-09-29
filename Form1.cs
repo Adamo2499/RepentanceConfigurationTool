@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Repentance_Configuration_Tool
@@ -15,6 +10,8 @@ namespace Repentance_Configuration_Tool
     {
         public string isaacLocation { get; set; }
         public string optionsLocation { get; set; }
+
+        public string options { get; set; }
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +29,19 @@ namespace Repentance_Configuration_Tool
 
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-            openFileDialog1.OpenFile();
+           openFileDialog1.OpenFile();
+           optionsLocation = openFileDialog1.FileName;
+            try
+            {
+                options = File.ReadAllText(optionsLocation);
+                int size = options.Length;
+                MessageBox.Show(options);
+            }
+            catch (IOException ioExp)
+            {
+                MessageBox.Show(ioExp.Message);
+            }
+            
             textBox1.Text.Replace("Options folder not found", "Options folder found");
         }
 
@@ -100,6 +109,23 @@ namespace Repentance_Configuration_Tool
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
             label8.Text = "Music Volume: " + trackBar1.Value;
+            double value = Math.Round(trackBar1.Value%10.0)/10;
+            string stringValue = value.ToString();
+            if(trackBar1.Value == 0)
+            {
+                stringValue = "0.0000";
+            }
+            else if(trackBar1.Value == 10)
+            {
+                stringValue = "1.0000";
+            }
+            else
+            {
+                stringValue = stringValue.Replace(",", ".");
+                stringValue += "000";
+            }
+            MessageBox.Show(stringValue);
+            lineChanger("MusicVolume="+stringValue, optionsLocation, 3);
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
@@ -122,13 +148,22 @@ namespace Repentance_Configuration_Tool
         {
             label13.Text = "HUD offset: " + trackBar6.Value;
         }
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+        }
         private void button3_Click(object sender, EventArgs e)
         {
             string isaacExe = isaacLocation + "\\isaac-ng.exe";
             ProcessStartInfo startIsaac = new ProcessStartInfo();
             startIsaac.FileName = isaacExe;
             Process.Start(startIsaac);
+        }
+
+        private void lineChanger(string newText, string fileName, int line_to_edit)
+        {
+            string[] arrLine = File.ReadAllLines(fileName);
+            arrLine[line_to_edit - 1] = newText;
+            File.WriteAllLines(fileName, arrLine);
         }
     }
 }

@@ -99,21 +99,21 @@ namespace Repentance_Configuration_Tool
             this.trackBar6 = new System.Windows.Forms.TrackBar();
             this.label13 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBox19 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox17 = new System.Windows.Forms.CheckBox();
-            this.checkBox21 = new System.Windows.Forms.CheckBox();
-            this.checkBox24 = new System.Windows.Forms.CheckBox();
-            this.checkBox25 = new System.Windows.Forms.CheckBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.checkBox26 = new System.Windows.Forms.CheckBox();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox28 = new System.Windows.Forms.CheckBox();
+            this.checkBox21 = new System.Windows.Forms.CheckBox();
+            this.checkBox24 = new System.Windows.Forms.CheckBox();
+            this.checkBox25 = new System.Windows.Forms.CheckBox();
+            this.checkBox17 = new System.Windows.Forms.CheckBox();
+            this.checkBox19 = new System.Windows.Forms.CheckBox();
+            this.checkBox23 = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -476,26 +476,26 @@ namespace Repentance_Configuration_Tool
             // saveAllCtrlSToolStripMenuItem
             // 
             this.saveAllCtrlSToolStripMenuItem.Name = "saveAllCtrlSToolStripMenuItem";
-            this.saveAllCtrlSToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.saveAllCtrlSToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.saveAllCtrlSToolStripMenuItem.Text = "Save All (Ctrl+S)";
             // 
             // restoreAllToolStripMenuItem
             // 
             this.restoreAllToolStripMenuItem.Name = "restoreAllToolStripMenuItem";
-            this.restoreAllToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.restoreAllToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.restoreAllToolStripMenuItem.Text = "Restore All";
             // 
             // setOptionsFolderToolStripMenuItem
             // 
             this.setOptionsFolderToolStripMenuItem.Name = "setOptionsFolderToolStripMenuItem";
-            this.setOptionsFolderToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.setOptionsFolderToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.setOptionsFolderToolStripMenuItem.Text = "Set Options folder";
             this.setOptionsFolderToolStripMenuItem.Click += new System.EventHandler(this.setOptionsFolderToolStripMenuItem_Click);
             // 
             // setIsaacFolderToolStripMenuItem
             // 
             this.setIsaacFolderToolStripMenuItem.Name = "setIsaacFolderToolStripMenuItem";
-            this.setIsaacFolderToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.setIsaacFolderToolStripMenuItem.Size = new System.Drawing.Size(213, 26);
             this.setIsaacFolderToolStripMenuItem.Text = "Set Isaac Folder";
             this.setIsaacFolderToolStripMenuItem.Click += new System.EventHandler(this.setIsaacFolderToolStripMenuItem_Click);
             // 
@@ -867,35 +867,54 @@ namespace Repentance_Configuration_Tool
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "config.ini options";
             // 
-            // checkBox19
+            // button2
             // 
-            this.checkBox19.AutoSize = true;
-            this.checkBox19.Location = new System.Drawing.Point(6, 21);
-            this.checkBox19.Name = "checkBox19";
-            this.checkBox19.Size = new System.Drawing.Size(132, 21);
-            this.checkBox19.TabIndex = 21;
-            this.checkBox19.Text = "Color Correction";
-            this.checkBox19.UseVisualStyleBackColor = true;
+            this.button2.Location = new System.Drawing.Point(107, 98);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 31);
+            this.button2.TabIndex = 41;
+            this.button2.Text = "Delete";
+            this.button2.UseVisualStyleBackColor = true;
             // 
-            // checkBox23
+            // button1
             // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(6, 40);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(80, 21);
-            this.checkBox23.TabIndex = 22;
-            this.checkBox23.Text = "Lighting";
-            this.checkBox23.UseVisualStyleBackColor = true;
+            this.button1.Location = new System.Drawing.Point(9, 98);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 31);
+            this.button1.TabIndex = 41;
+            this.button1.Text = "Create";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // checkBox17
+            // checkBox26
             // 
-            this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(6, 58);
-            this.checkBox17.Name = "checkBox17";
-            this.checkBox17.Size = new System.Drawing.Size(69, 21);
-            this.checkBox17.TabIndex = 23;
-            this.checkBox17.Text = "Bloom";
-            this.checkBox17.UseVisualStyleBackColor = true;
+            this.checkBox26.AutoSize = true;
+            this.checkBox26.Location = new System.Drawing.Point(254, 60);
+            this.checkBox26.Name = "checkBox26";
+            this.checkBox26.Size = new System.Drawing.Size(108, 21);
+            this.checkBox26.TabIndex = 29;
+            this.checkBox26.Text = "Interpolation";
+            this.checkBox26.UseVisualStyleBackColor = true;
+            // 
+            // checkBox27
+            // 
+            this.checkBox27.AutoSize = true;
+            this.checkBox27.Location = new System.Drawing.Point(254, 23);
+            this.checkBox27.Name = "checkBox27";
+            this.checkBox27.Size = new System.Drawing.Size(101, 21);
+            this.checkBox27.TabIndex = 27;
+            this.checkBox27.Text = "Shockwave";
+            this.checkBox27.UseVisualStyleBackColor = true;
+            // 
+            // checkBox28
+            // 
+            this.checkBox28.AutoSize = true;
+            this.checkBox28.Location = new System.Drawing.Point(254, 42);
+            this.checkBox28.Name = "checkBox28";
+            this.checkBox28.Size = new System.Drawing.Size(90, 21);
+            this.checkBox28.TabIndex = 28;
+            this.checkBox28.Text = "Pixelation";
+            this.checkBox28.UseVisualStyleBackColor = true;
             // 
             // checkBox21
             // 
@@ -927,35 +946,35 @@ namespace Repentance_Configuration_Tool
             this.checkBox25.Text = "Filter";
             this.checkBox25.UseVisualStyleBackColor = true;
             // 
-            // checkBox26
+            // checkBox17
             // 
-            this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(254, 60);
-            this.checkBox26.Name = "checkBox26";
-            this.checkBox26.Size = new System.Drawing.Size(108, 21);
-            this.checkBox26.TabIndex = 29;
-            this.checkBox26.Text = "Interpolation";
-            this.checkBox26.UseVisualStyleBackColor = true;
+            this.checkBox17.AutoSize = true;
+            this.checkBox17.Location = new System.Drawing.Point(6, 58);
+            this.checkBox17.Name = "checkBox17";
+            this.checkBox17.Size = new System.Drawing.Size(69, 21);
+            this.checkBox17.TabIndex = 23;
+            this.checkBox17.Text = "Bloom";
+            this.checkBox17.UseVisualStyleBackColor = true;
             // 
-            // checkBox27
+            // checkBox19
             // 
-            this.checkBox27.AutoSize = true;
-            this.checkBox27.Location = new System.Drawing.Point(254, 23);
-            this.checkBox27.Name = "checkBox27";
-            this.checkBox27.Size = new System.Drawing.Size(101, 21);
-            this.checkBox27.TabIndex = 27;
-            this.checkBox27.Text = "Shockwave";
-            this.checkBox27.UseVisualStyleBackColor = true;
+            this.checkBox19.AutoSize = true;
+            this.checkBox19.Location = new System.Drawing.Point(6, 21);
+            this.checkBox19.Name = "checkBox19";
+            this.checkBox19.Size = new System.Drawing.Size(132, 21);
+            this.checkBox19.TabIndex = 21;
+            this.checkBox19.Text = "Color Correction";
+            this.checkBox19.UseVisualStyleBackColor = true;
             // 
-            // checkBox28
+            // checkBox23
             // 
-            this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(254, 42);
-            this.checkBox28.Name = "checkBox28";
-            this.checkBox28.Size = new System.Drawing.Size(90, 21);
-            this.checkBox28.TabIndex = 28;
-            this.checkBox28.Text = "Pixelation";
-            this.checkBox28.UseVisualStyleBackColor = true;
+            this.checkBox23.AutoSize = true;
+            this.checkBox23.Location = new System.Drawing.Point(6, 40);
+            this.checkBox23.Name = "checkBox23";
+            this.checkBox23.Size = new System.Drawing.Size(80, 21);
+            this.checkBox23.TabIndex = 22;
+            this.checkBox23.Text = "Lighting";
+            this.checkBox23.UseVisualStyleBackColor = true;
             // 
             // label14
             // 
@@ -999,24 +1018,6 @@ namespace Repentance_Configuration_Tool
             this.comboBox2.Size = new System.Drawing.Size(88, 24);
             this.comboBox2.TabIndex = 40;
             this.comboBox2.Text = "English";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(9, 98);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 31);
-            this.button1.TabIndex = 41;
-            this.button1.Text = "Create";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(107, 98);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 31);
-            this.button2.TabIndex = 41;
-            this.button2.Text = "Delete";
-            this.button2.UseVisualStyleBackColor = true;
             // 
             // button3
             // 
