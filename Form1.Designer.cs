@@ -1021,6 +1021,7 @@ namespace Repentance_Configuration_Tool
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.Location = new System.Drawing.Point(18, 780);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(166, 33);
@@ -1036,8 +1037,7 @@ namespace Repentance_Configuration_Tool
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(939, 22);
             this.textBox1.TabIndex = 42;
-            this.textBox1.Text = "Options folder not found | Mods folder not found | Isaac folder not found | confi" +
-    "g.ini not found";
+            this.textBox1.Text = "Isaac folder not found | options.ini not found";
             // 
             // Form1
             // 
