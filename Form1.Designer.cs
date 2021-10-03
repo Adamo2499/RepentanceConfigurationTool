@@ -704,6 +704,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox18.TabIndex = 21;
             this.checkBox18.Text = "Small Console Font";
             this.checkBox18.UseVisualStyleBackColor = true;
+            this.checkBox18.CheckedChanged += new System.EventHandler(this.checkBox18_CheckedChanged);
             // 
             // checkBox20
             // 
@@ -715,6 +716,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox20.TabIndex = 22;
             this.checkBox20.Text = "Faded Console Display";
             this.checkBox20.UseVisualStyleBackColor = true;
+            this.checkBox20.CheckedChanged += new System.EventHandler(this.checkBox20_CheckedChanged);
             // 
             // checkBox22
             // 
@@ -726,6 +728,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox22.TabIndex = 23;
             this.checkBox22.Text = "Save command history";
             this.checkBox22.UseVisualStyleBackColor = true;
+            this.checkBox22.CheckedChanged += new System.EventHandler(this.checkBox22_CheckedChanged);
             // 
             // trackBar1
             // 

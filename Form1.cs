@@ -26,7 +26,21 @@ namespace Repentance_Configuration_Tool
         {
             openFileDialog2.ShowDialog();
         }
-
+        private void setTrackBarValue(TrackBar trackbarName, int value)
+        {
+            if(value < trackbarName.Minimum)
+            {
+                trackbarName.Value = trackbarName.Minimum;
+            }
+            else if(value > trackbarName.Maximum)
+            {
+                trackbarName.Value = trackbarName.Maximum;
+            }
+            else
+            {
+                trackbarName.Value = value;
+            }
+        }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
            optionsLocation = openFileDialog1.FileName;
@@ -41,14 +55,44 @@ namespace Repentance_Configuration_Tool
             for (int i = 2; i < fileOptions.Length-2; i++)
             {
                 simpleOption = fileOptions[i].Split('=');
-                optionsValues[i-2,0] = simpleOption[0];
-                optionsValues[i-2,1] = simpleOption[1];
-                optionsValues[i-2, 1] = optionsValues[i-2, 1].Replace(",", ".");
+                optionsValues[i - 2, 0] = simpleOption[0];
+                optionsValues[i - 2, 1] = simpleOption[1];
+                optionsValues[i - 2, 1] = optionsValues[i - 2, 1].Replace("\r", "");
+                optionsValues[i - 2, 1] = optionsValues[i - 2, 1].Replace(".", ",");
             }
-            MessageBox.Show(optionsValues[0,0]+":"+optionsValues[0,1]);
+            #region transfering data from options.ini to Rep Conf Tool
+                int value1 = convertValuesFromFileToProgram(optionsValues[0, 1]);
+                setTrackBarValue(trackBar1, value1);
+                label8.Text = "Music Volume: " + trackBar1.Value;
+                int value2 = convertValuesFromFileToProgram(optionsValues[2, 1]);
+                setTrackBarValue(trackBar2, value2);
+                label9.Text = "SFX Volume: " + trackBar2.Value;
+                int value3 = convertValuesFromFileToProgram(optionsValues[3, 1]);
+                setTrackBarValue(trackBar3, value3);
+                label10.Text = "Map Opacity: " + trackBar3.Value;
+                int value4 = convertValuesFromFileToProgram(optionsValues[6, 1])*10;
+                setTrackBarValue(trackBar4, value4);
+                label11.Text = "Exposure: " + trackBar4.Value;
+                int value5 = convertValuesFromFileToProgram(optionsValues[7, 1])*10;
+                setTrackBarValue(trackBar5, value5);
+                label12.Text = "Gamma: " + trackBar5.Value;
+                int value6 = convertValuesFromFileToProgram(optionsValues[12, 1]);
+                setTrackBarValue(trackBar6, value6);
+                label13.Text = "HUD offset: " + trackBar6.Value;
+            if (optionsValues[30, 1].Equals("1"))
+            {
+                checkBox22.Checked = true;
+            }
+            else
+            {
+                checkBox22.Checked = false;
+            }
+            #endregion
+
+
             textBox1.Text = textBox1.Text.Replace("options.ini not found", "options.ini found");
         }
-
+        
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
         {
             string isaacFullLocation = openFileDialog2.FileName;
@@ -168,7 +212,6 @@ namespace Repentance_Configuration_Tool
             {
                 MessageBox.Show("options.ini wasn't selected!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            //nullreferenceexception
         }
         private void trackBar3_Scroll(object sender, EventArgs e)
         {
@@ -231,6 +274,56 @@ namespace Repentance_Configuration_Tool
                 lockStatus = true;
             }
             return lockStatus;
+        }
+
+        public int convertValuesFromFileToProgram(string value)
+        {
+            string testOptionValue = value;
+            double testValue = double.Parse(testOptionValue);
+            testValue *= 10;
+            return (int)testValue;
+        }
+
+        private void checkBox18_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox18.Checked == false)
+            {
+                lineChanger("ConsoleFont=0", optionsLocation, 31);
+                MessageBox.Show("ConsoleFont=0");
+            }
+            else
+            {
+                lineChanger("ConsoleFont=1", optionsLocation, 31);
+                MessageBox.Show("ConsoleFont=1");
+            }
+        }
+
+        private void checkBox20_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox20.Checked == false)
+            {
+                lineChanger("FadedConsoleDisplay=0", optionsLocation, 32);
+                MessageBox.Show("FadedConsoleDisplay=0");
+            }
+            else
+            {
+                lineChanger("FadedConsoleDisplay=1", optionsLocation, 32);
+                MessageBox.Show("FadedConsoleDisplay=1");
+            }
+        }
+
+        private void checkBox22_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox22.Checked == false)
+            {
+                lineChanger("SaveCommandHistory=0", optionsLocation, 33);
+                MessageBox.Show("SaveCommandHistory=0");
+            }
+            else
+            {
+                lineChanger("SaveCommandHistory=1", optionsLocation, 33);
+                MessageBox.Show("SaveCommandHistory=1");
+            }
         }
     }
 }
