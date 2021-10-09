@@ -105,9 +105,7 @@ namespace Repentance_Configuration_Tool
 
         private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
         {
-            //MessageBox.Show(domainUpDown1.Text+" Numer indeksu: "+domainUpDown1.SelectedIndex);
-            
-
+            changeSetting("ShowRecentItems=" + domainUpDown1.SelectedIndex, 14);
         }
         private void disableAllModsToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -176,7 +174,7 @@ namespace Repentance_Configuration_Tool
             //MessageBox.Show(stringValue);
             try
             {
-                lineChanger("MusicVolume=" + stringValue, optionsLocation, 3);
+                changeSetting("MusicVolume=" + stringValue, 3);
             }
             catch (NullReferenceException)
             {
@@ -203,7 +201,6 @@ namespace Repentance_Configuration_Tool
                 stringValue = stringValue.Replace(",", ".");
                 stringValue += "000";
             }
-            //MessageBox.Show(stringValue);
             try
             {
                 lineChanger("SFXVolume=" + stringValue, optionsLocation, 3);
@@ -286,44 +283,221 @@ namespace Repentance_Configuration_Tool
 
         private void checkBox18_CheckedChanged(object sender, EventArgs e)
         {
-            if(checkBox18.Checked == false)
+            if(checkBox18.Checked == true)
             {
-                lineChanger("ConsoleFont=0", optionsLocation, 31);
-                MessageBox.Show("ConsoleFont=0");
+                changeSetting("ConsoleFont=1", 31);
             }
             else
             {
-                lineChanger("ConsoleFont=1", optionsLocation, 31);
-                MessageBox.Show("ConsoleFont=1");
+                changeSetting("ConsoleFont=0", 31);
             }
         }
 
         private void checkBox20_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox20.Checked == false)
+            if (checkBox20.Checked == true)
             {
-                lineChanger("FadedConsoleDisplay=0", optionsLocation, 32);
-                MessageBox.Show("FadedConsoleDisplay=0");
+                changeSetting("FadedConsoleDisplay=1", 32);
             }
             else
             {
-                lineChanger("FadedConsoleDisplay=1", optionsLocation, 32);
-                MessageBox.Show("FadedConsoleDisplay=1");
+                changeSetting("FadedConsoleDisplay=0", 32);
             }
         }
 
         private void checkBox22_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox22.Checked == false)
+            if (checkBox22.Checked == true)
             {
-                lineChanger("SaveCommandHistory=0", optionsLocation, 33);
-                MessageBox.Show("SaveCommandHistory=0");
+                changeSetting("SaveCommandHistory=1", 33);
             }
             else
             {
-                lineChanger("SaveCommandHistory=1", optionsLocation, 33);
-                MessageBox.Show("SaveCommandHistory=1");
+                changeSetting("SaveCommandHistory=0", 33);
             }
+        }
+
+        private void checkBox6_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox6.Checked == true)
+            {
+                changeSetting("ChargeBars=1", 20);
+            }
+            else
+            {
+                changeSetting("ChargeBars=0", 20);
+            }
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                changeSetting("Fullscreen=1", 7);
+            }
+            else
+            {
+                changeSetting("Fullscreen=0", 7);
+            }
+        }
+
+
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked == true)
+            {
+                changeSetting("Vsync=1", 25);
+            }
+            else
+            {
+                changeSetting("Vsync=0", 25);
+            }
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked == true)
+            {
+                changeSetting("CameraStyle=1", 13);
+            }
+            else
+            {
+                changeSetting("CameraStyle=0", 13);
+            }
+        }
+        private void checkBox5_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox5.Checked == true)
+            {
+                changeSetting("BossHpOnBottom=1", 29);
+            }
+            else
+            {
+                changeSetting("BossHpOnBottom=0", 29);
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int voiceOption = comboBox1.SelectedIndex;
+            changeSetting("AnnouncerVoiceMode=" + voiceOption, 30);
+        }
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            changeSetting("MaxScale=" + numericUpDown1.Value, 23);
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            lineChanger("MaxScale=" + numericUpDown1.Value, optionsLocation, 24);
+        }
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            changeSetting("WindowWidth=" + numericUpDown3.Value,34);
+        }
+
+        private void numericUpDown4_ValueChanged(object sender, EventArgs e)
+        {
+            changeSetting("WindowHeight=" + numericUpDown4.Value, 35);
+        }
+
+        private void numericUpDown5_ValueChanged(object sender, EventArgs e)
+        {
+            changeSetting("WindowPosX=" + numericUpDown5.Value, 36);
+        }
+
+        private void numericUpDown6_ValueChanged(object sender, EventArgs e)
+        {
+            changeSetting("WindowPosY=" + numericUpDown6.Value, 37);
+        }
+
+        
+        private void changeSetting(string value, int lineToChange)
+        {
+            lineChanger(value, optionsLocation, lineToChange);
+        }
+
+        private void checkBox4_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox4.Checked == true)
+            {
+                changeSetting("Filter=1", 8);
+            }
+            else
+            {
+                changeSetting("Filter=0", 8);
+            }
+        }
+
+        private void checkBox8_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox7_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox16_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox16.Checked == true)
+            {
+                changeSetting("EnableMods=1", 18);
+            }
+            else
+            {
+                changeSetting("EnableMods=0", 18);
+            }
+        }
+
+        private void checkBox15_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox15.Checked == true)
+            {
+                changeSetting("PopUps=1", 12);
+            }
+            else
+            {
+                changeSetting("PopUps=0", 12);
+            }
+        }
+
+        private void checkBox14_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox14.Checked == true)
+            {
+                changeSetting("MouseControl=1", 28);
+            }
+            else
+            {
+                changeSetting("MouseControl=0", 28);
+            }
+        }
+
+        private void checkBox13_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox12_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox11_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox10_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox9_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

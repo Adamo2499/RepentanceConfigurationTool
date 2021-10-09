@@ -168,6 +168,7 @@ namespace Repentance_Configuration_Tool
             0,
             0,
             0});
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // numericUpDown2
             // 
@@ -180,6 +181,7 @@ namespace Repentance_Configuration_Tool
             0,
             0,
             0});
+            this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // label1
             // 
@@ -208,6 +210,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "Fullscreen";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // checkBox2
             // 
@@ -220,6 +223,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox2.TabIndex = 7;
             this.checkBox2.Text = "VSync";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox3
             // 
@@ -232,6 +236,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox3.TabIndex = 8;
             this.checkBox3.Text = "Active Cam";
             this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
             // checkBox4
             // 
@@ -242,6 +247,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox4.TabIndex = 9;
             this.checkBox4.Text = "Filter";
             this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // checkBox5
             // 
@@ -254,6 +260,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox5.TabIndex = 13;
             this.checkBox5.Text = "Boss HP on Bottom";
             this.checkBox5.UseVisualStyleBackColor = true;
+            this.checkBox5.CheckedChanged += new System.EventHandler(this.checkBox5_CheckedChanged);
             // 
             // checkBox6
             // 
@@ -266,6 +273,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox6.TabIndex = 12;
             this.checkBox6.Text = "Charge Bars";
             this.checkBox6.UseVisualStyleBackColor = true;
+            this.checkBox6.CheckedChanged += new System.EventHandler(this.checkBox6_CheckedChanged);
             // 
             // checkBox7
             // 
@@ -278,6 +286,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox7.TabIndex = 11;
             this.checkBox7.Text = "Found HUD";
             this.checkBox7.UseVisualStyleBackColor = true;
+            this.checkBox7.CheckedChanged += new System.EventHandler(this.checkBox7_CheckedChanged);
             // 
             // checkBox8
             // 
@@ -288,6 +297,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox8.TabIndex = 10;
             this.checkBox8.Text = "High bullet visibility";
             this.checkBox8.UseVisualStyleBackColor = true;
+            this.checkBox8.CheckedChanged += new System.EventHandler(this.checkBox8_CheckedChanged);
             // 
             // groupBox1
             // 
@@ -373,6 +383,7 @@ namespace Repentance_Configuration_Tool
             0,
             0,
             0});
+            this.numericUpDown6.ValueChanged += new System.EventHandler(this.numericUpDown6_ValueChanged);
             // 
             // label6
             // 
@@ -399,6 +410,7 @@ namespace Repentance_Configuration_Tool
             0,
             0,
             0});
+            this.numericUpDown5.ValueChanged += new System.EventHandler(this.numericUpDown5_ValueChanged);
             // 
             // label5
             // 
@@ -430,6 +442,7 @@ namespace Repentance_Configuration_Tool
             0,
             0,
             0});
+            this.numericUpDown4.ValueChanged += new System.EventHandler(this.numericUpDown4_ValueChanged);
             // 
             // label4
             // 
@@ -461,6 +474,7 @@ namespace Repentance_Configuration_Tool
             0,
             0,
             0});
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
             // 
             // testToolStripMenuItem
             // 
@@ -470,7 +484,7 @@ namespace Repentance_Configuration_Tool
             this.setOptionsFolderToolStripMenuItem,
             this.setIsaacFolderToolStripMenuItem});
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.testToolStripMenuItem.Text = "File";
             // 
             // saveAllCtrlSToolStripMenuItem
@@ -505,7 +519,7 @@ namespace Repentance_Configuration_Tool
             this.optionsToolStripMenuItem,
             this.isaacToolStripMenuItem});
             this.foldersToolStripMenuItem.Name = "foldersToolStripMenuItem";
-            this.foldersToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
+            this.foldersToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
             this.foldersToolStripMenuItem.Text = "Folders";
             // 
             // optionsToolStripMenuItem
@@ -530,7 +544,7 @@ namespace Repentance_Configuration_Tool
             this.checkOnlyWithoutLUAToolStripMenuItem,
             this.inverseModsToolStripMenuItem});
             this.modsListsToolStripMenuItem.Name = "modsListsToolStripMenuItem";
-            this.modsListsToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
+            this.modsListsToolStripMenuItem.Size = new System.Drawing.Size(92, 26);
             this.modsListsToolStripMenuItem.Text = "Mods Lists";
             // 
             // exportToolStripMenuItem
@@ -581,7 +595,7 @@ namespace Repentance_Configuration_Tool
             this.modsListsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(939, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(939, 30);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip2";
             // 
@@ -594,6 +608,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox9.TabIndex = 28;
             this.checkBox9.Text = "Steam Cloud";
             this.checkBox9.UseVisualStyleBackColor = true;
+            this.checkBox9.CheckedChanged += new System.EventHandler(this.checkBox9_CheckedChanged);
             // 
             // checkBox10
             // 
@@ -604,6 +619,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox10.TabIndex = 27;
             this.checkBox10.Text = "Try Import Save";
             this.checkBox10.UseVisualStyleBackColor = true;
+            this.checkBox10.CheckedChanged += new System.EventHandler(this.checkBox10_CheckedChanged);
             // 
             // checkBox11
             // 
@@ -614,6 +630,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox11.TabIndex = 26;
             this.checkBox11.Text = "Controller Hotplug";
             this.checkBox11.UseVisualStyleBackColor = true;
+            this.checkBox11.CheckedChanged += new System.EventHandler(this.checkBox11_CheckedChanged);
             // 
             // checkBox12
             // 
@@ -624,6 +641,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox12.TabIndex = 25;
             this.checkBox12.Text = "Pause on Focus Lost";
             this.checkBox12.UseVisualStyleBackColor = true;
+            this.checkBox12.CheckedChanged += new System.EventHandler(this.checkBox12_CheckedChanged);
             // 
             // checkBox13
             // 
@@ -634,6 +652,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox13.TabIndex = 24;
             this.checkBox13.Text = "Rumble";
             this.checkBox13.UseVisualStyleBackColor = true;
+            this.checkBox13.CheckedChanged += new System.EventHandler(this.checkBox13_CheckedChanged);
             // 
             // checkBox14
             // 
@@ -644,6 +663,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox14.TabIndex = 23;
             this.checkBox14.Text = "Mouse control";
             this.checkBox14.UseVisualStyleBackColor = true;
+            this.checkBox14.CheckedChanged += new System.EventHandler(this.checkBox14_CheckedChanged);
             // 
             // checkBox15
             // 
@@ -654,6 +674,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox15.TabIndex = 22;
             this.checkBox15.Text = "Pop-ups";
             this.checkBox15.UseVisualStyleBackColor = true;
+            this.checkBox15.CheckedChanged += new System.EventHandler(this.checkBox15_CheckedChanged);
             // 
             // checkBox16
             // 
@@ -664,6 +685,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox16.TabIndex = 21;
             this.checkBox16.Text = "Enable mods";
             this.checkBox16.UseVisualStyleBackColor = true;
+            this.checkBox16.CheckedChanged += new System.EventHandler(this.checkBox16_CheckedChanged);
             // 
             // groupBox3
             // 
@@ -892,7 +914,7 @@ namespace Repentance_Configuration_Tool
             // checkBox26
             // 
             this.checkBox26.AutoSize = true;
-            this.checkBox26.Location = new System.Drawing.Point(254, 60);
+            this.checkBox26.Location = new System.Drawing.Point(254, 67);
             this.checkBox26.Name = "checkBox26";
             this.checkBox26.Size = new System.Drawing.Size(108, 21);
             this.checkBox26.TabIndex = 29;
@@ -912,7 +934,7 @@ namespace Repentance_Configuration_Tool
             // checkBox28
             // 
             this.checkBox28.AutoSize = true;
-            this.checkBox28.Location = new System.Drawing.Point(254, 42);
+            this.checkBox28.Location = new System.Drawing.Point(254, 45);
             this.checkBox28.Name = "checkBox28";
             this.checkBox28.Size = new System.Drawing.Size(90, 21);
             this.checkBox28.TabIndex = 28;
@@ -922,7 +944,7 @@ namespace Repentance_Configuration_Tool
             // checkBox21
             // 
             this.checkBox21.AutoSize = true;
-            this.checkBox21.Location = new System.Drawing.Point(136, 60);
+            this.checkBox21.Location = new System.Drawing.Point(136, 67);
             this.checkBox21.Name = "checkBox21";
             this.checkBox21.Size = new System.Drawing.Size(119, 21);
             this.checkBox21.TabIndex = 26;
@@ -942,7 +964,7 @@ namespace Repentance_Configuration_Tool
             // checkBox25
             // 
             this.checkBox25.AutoSize = true;
-            this.checkBox25.Location = new System.Drawing.Point(136, 42);
+            this.checkBox25.Location = new System.Drawing.Point(136, 45);
             this.checkBox25.Name = "checkBox25";
             this.checkBox25.Size = new System.Drawing.Size(61, 21);
             this.checkBox25.TabIndex = 25;
@@ -952,7 +974,7 @@ namespace Repentance_Configuration_Tool
             // checkBox17
             // 
             this.checkBox17.AutoSize = true;
-            this.checkBox17.Location = new System.Drawing.Point(6, 58);
+            this.checkBox17.Location = new System.Drawing.Point(6, 65);
             this.checkBox17.Name = "checkBox17";
             this.checkBox17.Size = new System.Drawing.Size(69, 21);
             this.checkBox17.TabIndex = 23;
@@ -972,7 +994,7 @@ namespace Repentance_Configuration_Tool
             // checkBox23
             // 
             this.checkBox23.AutoSize = true;
-            this.checkBox23.Location = new System.Drawing.Point(6, 40);
+            this.checkBox23.Location = new System.Drawing.Point(6, 43);
             this.checkBox23.Name = "checkBox23";
             this.checkBox23.Size = new System.Drawing.Size(80, 21);
             this.checkBox23.TabIndex = 22;
@@ -999,7 +1021,7 @@ namespace Repentance_Configuration_Tool
             // 
             // comboBox1
             // 
-            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox1.Items.AddRange(new object[] {
             "Random",
             "Never",
@@ -1008,10 +1030,11 @@ namespace Repentance_Configuration_Tool
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(88, 24);
             this.comboBox1.TabIndex = 39;
-            this.comboBox1.Text = "Random";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "English",
@@ -1020,7 +1043,6 @@ namespace Repentance_Configuration_Tool
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(88, 24);
             this.comboBox2.TabIndex = 40;
-            this.comboBox2.Text = "English";
             // 
             // button3
             // 
@@ -1046,6 +1068,7 @@ namespace Repentance_Configuration_Tool
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(939, 847);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox2);
