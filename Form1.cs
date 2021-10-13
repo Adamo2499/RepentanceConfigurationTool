@@ -28,11 +28,11 @@ namespace Repentance_Configuration_Tool
         }
         private void setTrackBarValue(TrackBar trackbarName, int value)
         {
-            if(value < trackbarName.Minimum)
+            if (value < trackbarName.Minimum)
             {
                 trackbarName.Value = trackbarName.Minimum;
             }
-            else if(value > trackbarName.Maximum)
+            else if (value > trackbarName.Maximum)
             {
                 trackbarName.Value = trackbarName.Maximum;
             }
@@ -43,16 +43,16 @@ namespace Repentance_Configuration_Tool
         }
         private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
         {
-           optionsLocation = openFileDialog1.FileName;
+            optionsLocation = openFileDialog1.FileName;
             var fileStream = openFileDialog1.OpenFile();
             string[] fileOptions = new string[fileStream.Length];
             using (StreamReader reader = new StreamReader(fileStream))
             {
-                 fileOptions = reader.ReadToEnd().Split('\n');
+                fileOptions = reader.ReadToEnd().Split('\n');
             }
             fileStream.Close();
             string[] simpleOption;
-            for (int i = 2; i < fileOptions.Length-2; i++)
+            for (int i = 2; i < fileOptions.Length - 2; i++)
             {
                 simpleOption = fileOptions[i].Split('=');
                 optionsValues[i - 2, 0] = simpleOption[0];
@@ -61,38 +61,50 @@ namespace Repentance_Configuration_Tool
                 optionsValues[i - 2, 1] = optionsValues[i - 2, 1].Replace(".", ",");
             }
             #region transfering data from options.ini to Rep Conf Tool
-                int value1 = convertValuesFromFileToProgram(optionsValues[0, 1]);
-                setTrackBarValue(trackBar1, value1);
-                label8.Text = "Music Volume: " + trackBar1.Value;
-                int value2 = convertValuesFromFileToProgram(optionsValues[2, 1]);
-                setTrackBarValue(trackBar2, value2);
-                label9.Text = "SFX Volume: " + trackBar2.Value;
-                int value3 = convertValuesFromFileToProgram(optionsValues[3, 1]);
-                setTrackBarValue(trackBar3, value3);
-                label10.Text = "Map Opacity: " + trackBar3.Value;
-                int value4 = convertValuesFromFileToProgram(optionsValues[6, 1])*10;
-                setTrackBarValue(trackBar4, value4);
-                label11.Text = "Exposure: " + trackBar4.Value;
-                int value5 = convertValuesFromFileToProgram(optionsValues[7, 1])*10;
-                setTrackBarValue(trackBar5, value5);
-                label12.Text = "Gamma: " + trackBar5.Value;
-                int value6 = convertValuesFromFileToProgram(optionsValues[12, 1]);
-                setTrackBarValue(trackBar6, value6);
-                label13.Text = "HUD offset: " + trackBar6.Value;
+            int value1 = convertValuesFromFileToProgram(optionsValues[0, 1]);
+            setTrackBarValue(trackBar1, value1);
+            label8.Text = "Music Volume: " + trackBar1.Value;
+            int value2 = convertValuesFromFileToProgram(optionsValues[2, 1]);
+            setTrackBarValue(trackBar2, value2);
+            label9.Text = "SFX Volume: " + trackBar2.Value;
+            int value3 = convertValuesFromFileToProgram(optionsValues[3, 1]);
+            setTrackBarValue(trackBar3, value3);
+            label10.Text = "Map Opacity: " + trackBar3.Value;
+            int value4 = convertValuesFromFileToProgram(optionsValues[6, 1]) * 10;
+            setTrackBarValue(trackBar4, value4);
+            label11.Text = "Exposure: " + trackBar4.Value;
+            int value5 = convertValuesFromFileToProgram(optionsValues[7, 1]) * 10;
+            setTrackBarValue(trackBar5, value5);
+            label12.Text = "Gamma: " + trackBar5.Value;
+            int value6 = convertValuesFromFileToProgram(optionsValues[12, 1]);
+            setTrackBarValue(trackBar6, value6);
+            label13.Text = "HUD offset: " + trackBar6.Value;
+            if (optionsValues[28, 1].Equals("1"))
+            {
+                checkBox18.Checked = true;
+            }
+            if (optionsValues[29, 1].Equals("1"))
+            {
+                checkBox20.Checked = true;
+            }
             if (optionsValues[30, 1].Equals("1"))
             {
                 checkBox22.Checked = true;
             }
-            else
-            {
-                checkBox22.Checked = false;
-            }
             #endregion
 
-
             textBox1.Text = textBox1.Text.Replace("options.ini not found", "options.ini found");
+            /*
+            // To write array to file
+            string str = "";
+            for (int i = 0; i < 39; i++)
+            {
+                str += "Numer lini: "+i+" "+optionsValues[i, 0] + ": " + optionsValues[i, 1]+Environment.NewLine;
+            }
+            //Write all text into file, but remember: path to file must be
+            File.WriteAllText("C:/Users/" + Environment.UserName + "/Desktop/optionsArray.txt", str);
+            */
         }
-        
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
         {
             string isaacFullLocation = openFileDialog2.FileName;
@@ -477,7 +489,14 @@ namespace Repentance_Configuration_Tool
 
         private void checkBox13_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox13.Checked == true)
+            {
+                changeSetting("RumbleEnabled=1", 19);
+            }
+            else
+            {
+                changeSetting("RumbleEnabled=0", 19);
+            }
         }
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
