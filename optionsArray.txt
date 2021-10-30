@@ -1,0 +1,39 @@
+Numer lini: 0 MusicVolume: 0,2000
+Numer lini: 1 MusicEnabled: 1
+Numer lini: 2 SFXVolume: 0,2000
+Numer lini: 3 MapOpacity: 0,2000
+Numer lini: 4 Fullscreen: 1
+Numer lini: 5 Filter: 0; checkbox4
+Numer lini: 6 Exposure: 1,2000
+Numer lini: 7 Gamma: 1,5000
+Numer lini: 8 ControllerHotplug: 1; checkBox11
+Numer lini: 9 PopUps: 1; checkbox15
+Numer lini: 10 CameraStyle: 1; checkBox3 
+Numer lini: 11 ShowRecentItems: 2
+Numer lini: 12 HudOffset: 1,2000 
+Numer lini: 13 TryImportSave: 0; checkBox10
+Numer lini: 14 FoundHUD: 1; checkBox7
+Numer lini: 15 EnableMods: 1;Checkbox 16
+Numer lini: 16 RumbleEnabled: 1; checkBox13
+Numer lini: 17 ChargeBars: 1; checkBox6
+Numer lini: 18 BulletVisibility: 1; checkbox8
+Numer lini: 19 EnableDebugConsole: 1 ;checkbox29
+Numer lini: 20 MaxScale: 99
+Numer lini: 21 MaxRenderScale: 2
+Numer lini: 22 VSync: 1; Checkbox2
+Numer lini: 23 PauseOnFocusLost: 1; Checkbox12
+Numer lini: 24 SteamCloud: 1; checkBox9
+Numer lini: 25 MouseControl: 0; Checkbox14
+Numer lini: 26 BossHpOnBottom: 1; Checkbox5
+Numer lini: 27 AnnouncerVoiceMode: 2;
+Numer lini: 28 ConsoleFont: 0; Checkbox18
+Numer lini: 29 FadedConsoleDisplay: 0; checkBox20
+Numer lini: 30 SaveCommandHistory: 1; checkBox22
+Numer lini: 31 WindowWidth: 943
+Numer lini: 32 WindowHeight: 540
+Numer lini: 33 WindowPosX: 212
+Numer lini: 34 WindowPosY: 38
+Numer lini: 35 : 
+Numer lini: 36 : 
+Numer lini: 37 : 
+Numer lini: 38 : 

@@ -83,6 +83,7 @@ namespace Repentance_Configuration_Tool
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.checkBox29 = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.checkBox20 = new System.Windows.Forms.CheckBox();
             this.checkBox22 = new System.Windows.Forms.CheckBox();
@@ -484,7 +485,7 @@ namespace Repentance_Configuration_Tool
             this.setOptionsFolderToolStripMenuItem,
             this.setIsaacFolderToolStripMenuItem});
             this.testToolStripMenuItem.Name = "testToolStripMenuItem";
-            this.testToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.testToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.testToolStripMenuItem.Text = "File";
             // 
             // saveAllCtrlSToolStripMenuItem
@@ -519,7 +520,7 @@ namespace Repentance_Configuration_Tool
             this.optionsToolStripMenuItem,
             this.isaacToolStripMenuItem});
             this.foldersToolStripMenuItem.Name = "foldersToolStripMenuItem";
-            this.foldersToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.foldersToolStripMenuItem.Size = new System.Drawing.Size(71, 24);
             this.foldersToolStripMenuItem.Text = "Folders";
             // 
             // optionsToolStripMenuItem
@@ -544,7 +545,7 @@ namespace Repentance_Configuration_Tool
             this.checkOnlyWithoutLUAToolStripMenuItem,
             this.inverseModsToolStripMenuItem});
             this.modsListsToolStripMenuItem.Name = "modsListsToolStripMenuItem";
-            this.modsListsToolStripMenuItem.Size = new System.Drawing.Size(92, 26);
+            this.modsListsToolStripMenuItem.Size = new System.Drawing.Size(92, 24);
             this.modsListsToolStripMenuItem.Text = "Mods Lists";
             // 
             // exportToolStripMenuItem
@@ -595,7 +596,7 @@ namespace Repentance_Configuration_Tool
             this.modsListsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(939, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(939, 28);
             this.menuStrip1.TabIndex = 2;
             this.menuStrip1.Text = "menuStrip2";
             // 
@@ -706,9 +707,7 @@ namespace Repentance_Configuration_Tool
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.checkBox18);
-            this.groupBox4.Controls.Add(this.checkBox20);
-            this.groupBox4.Controls.Add(this.checkBox22);
+            this.groupBox4.Controls.Add(this.checkBox29);
             this.groupBox4.Location = new System.Drawing.Point(316, 255);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(163, 133);
@@ -716,11 +715,23 @@ namespace Repentance_Configuration_Tool
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Console";
             // 
+            // checkBox29
+            // 
+            this.checkBox29.AutoSize = true;
+            this.checkBox29.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.checkBox29.Location = new System.Drawing.Point(0, 21);
+            this.checkBox29.Name = "checkBox29";
+            this.checkBox29.Size = new System.Drawing.Size(102, 17);
+            this.checkBox29.TabIndex = 43;
+            this.checkBox29.Text = "Enable console";
+            this.checkBox29.UseVisualStyleBackColor = true;
+            this.checkBox29.CheckedChanged += new System.EventHandler(this.checkBox29_CheckedChanged);
+            // 
             // checkBox18
             // 
             this.checkBox18.AutoSize = true;
             this.checkBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox18.Location = new System.Drawing.Point(6, 21);
+            this.checkBox18.Location = new System.Drawing.Point(317, 301);
             this.checkBox18.Name = "checkBox18";
             this.checkBox18.Size = new System.Drawing.Size(119, 17);
             this.checkBox18.TabIndex = 21;
@@ -732,7 +743,7 @@ namespace Repentance_Configuration_Tool
             // 
             this.checkBox20.AutoSize = true;
             this.checkBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox20.Location = new System.Drawing.Point(6, 48);
+            this.checkBox20.Location = new System.Drawing.Point(317, 328);
             this.checkBox20.Name = "checkBox20";
             this.checkBox20.Size = new System.Drawing.Size(137, 17);
             this.checkBox20.TabIndex = 22;
@@ -744,7 +755,7 @@ namespace Repentance_Configuration_Tool
             // 
             this.checkBox22.AutoSize = true;
             this.checkBox22.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.checkBox22.Location = new System.Drawing.Point(6, 75);
+            this.checkBox22.Location = new System.Drawing.Point(317, 355);
             this.checkBox22.Name = "checkBox22";
             this.checkBox22.Size = new System.Drawing.Size(136, 17);
             this.checkBox22.TabIndex = 23;
@@ -1070,7 +1081,10 @@ namespace Repentance_Configuration_Tool
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(939, 847);
+            this.Controls.Add(this.checkBox18);
+            this.Controls.Add(this.checkBox20);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.checkBox22);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox1);
@@ -1102,7 +1116,7 @@ namespace Repentance_Configuration_Tool
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Form1";
-            this.Text = "Repentance Configuration Tool by Adamo2499";
+            this.Text = "`Repentance Configuration Tool by Adamo2499";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -1221,6 +1235,7 @@ namespace Repentance_Configuration_Tool
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.CheckBox checkBox29;
     }
 }
 

@@ -79,6 +79,70 @@ namespace Repentance_Configuration_Tool
             int value6 = convertValuesFromFileToProgram(optionsValues[12, 1]);
             setTrackBarValue(trackBar6, value6);
             label13.Text = "HUD offset: " + trackBar6.Value;
+            if (optionsValues[5, 1].Equals("1"))
+            {
+                checkBox4.Checked = true;
+            }
+            if (optionsValues[8, 1].Equals("1"))
+            {
+                checkBox11.Checked = true;
+            }
+            if (optionsValues[9, 1].Equals("1"))
+            {
+                checkBox15.Checked = true;
+            }
+            if (optionsValues[10, 1].Equals("1"))
+            {
+                checkBox3.Checked = true;
+            }
+            if (optionsValues[13, 1].Equals("1"))
+            {
+                checkBox10.Checked = true;
+            }
+            if (optionsValues[14, 1].Equals("1"))
+            {
+                checkBox7.Checked = true;
+            }
+            if (optionsValues[15, 1].Equals("1"))
+            {
+                checkBox16.Checked = true;
+            }
+            if (optionsValues[16, 1].Equals("1"))
+            {
+                checkBox13.Checked = true;
+            }
+            if (optionsValues[17, 1].Equals("1"))
+            {
+                checkBox6.Checked = true;
+            }
+            if (optionsValues[18, 1].Equals("1"))
+            {
+                checkBox8.Checked = true;
+            }
+            if (optionsValues[19, 1].Equals("1"))
+            {
+                checkBox29.Checked = true;
+            }
+            if (optionsValues[22, 1].Equals("1"))
+            {
+                checkBox2.Checked = true;
+            }
+            if (optionsValues[23, 1].Equals("1"))
+            {
+                checkBox12.Checked = true;
+            }
+            if (optionsValues[24, 1].Equals("1"))
+            {
+                checkBox9.Checked = true;
+            }
+            if (optionsValues[25, 1].Equals("1"))
+            {
+                checkBox14.Checked = true;
+            }
+            if (optionsValues[26, 1].Equals("1"))
+            {
+                checkBox5.Checked = true;
+            }
             if (optionsValues[28, 1].Equals("1"))
             {
                 checkBox18.Checked = true;
@@ -91,8 +155,16 @@ namespace Repentance_Configuration_Tool
             {
                 checkBox22.Checked = true;
             }
+            numericUpDown1.Value = int.Parse(optionsValues[20, 1]);
+            numericUpDown2.Value = int.Parse(optionsValues[21, 1]);
+            numericUpDown3.Value = int.Parse(optionsValues[31, 1]);
+            numericUpDown4.Value = int.Parse(optionsValues[32, 1]);
+            numericUpDown5.Value = int.Parse(optionsValues[33, 1]);
+            numericUpDown6.Value = int.Parse(optionsValues[34, 1]);
+            domainUpDown1.SelectedIndex = int.Parse(optionsValues[11, 1]);
+            comboBox1.SelectedIndex = int.Parse(optionsValues[27, 1]);
+            comboBox2.SelectedIndex = 0;
             #endregion
-
             textBox1.Text = textBox1.Text.Replace("options.ini not found", "options.ini found");
             /*
             // To write array to file
@@ -424,9 +496,9 @@ namespace Repentance_Configuration_Tool
         }
 
         
-        private void changeSetting(string value, int lineToChange)
+        private void changeSetting(string newValue, int lineToChange)
         {
-            lineChanger(value, optionsLocation, lineToChange);
+            lineChanger(newValue, optionsLocation, lineToChange);
         }
 
         private void checkBox4_CheckedChanged(object sender, EventArgs e)
@@ -443,12 +515,26 @@ namespace Repentance_Configuration_Tool
 
         private void checkBox8_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox8.Checked == true)
+            {
+                changeSetting("BulletVisibility=1", 21);
+            }
+            else
+            {
+                changeSetting("BulletVisibility=0", 21);
+            }
         }
 
         private void checkBox7_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox7.Checked == true)
+            {
+                changeSetting("FoundHUD=1", 17);
+            }
+            else
+            {
+                changeSetting("FoundHUD=0", 17);
+            }
         }
 
         private void checkBox16_CheckedChanged(object sender, EventArgs e)
@@ -501,22 +587,58 @@ namespace Repentance_Configuration_Tool
 
         private void checkBox12_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox12.Checked == true)
+            {
+                changeSetting("PauseOnFocusLost=1", 26);
+            }
         }
 
         private void checkBox11_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox11.Checked == true)
+            {
+                changeSetting("ControllerHotplug=1", 11);
+            }
+            else
+            {
+                changeSetting("ControllerHotplug=0", 11);
+            }
         }
 
         private void checkBox10_CheckedChanged(object sender, EventArgs e)
         {
-
+            if(checkBox10.Checked == true)
+            {
+                changeSetting("TryImportSave=1", 16);
+            }
+            else
+            {
+                changeSetting("TryImportSave=0", 16);
+            }
         }
 
         private void checkBox9_CheckedChanged(object sender, EventArgs e)
         {
+            if(checkBox9.Checked == true)
+            {
+                changeSetting("SteamCloud=1", 27);
+            }
+            else
+            {
+                changeSetting("SteamCloud=0", 27);
+            }
+        }
 
+        private void checkBox29_CheckedChanged(object sender, EventArgs e)
+        {
+            if(checkBox29.Checked == true)
+            {
+                changeSetting("EnableDebugConsole=1", 22);
+            }
+            else
+            {
+                changeSetting("EnableDebugConsole=0", 22);
+            }
         }
     }
 }
