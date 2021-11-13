@@ -139,9 +139,10 @@ namespace Repentance_Configuration_Tool
             // 
             // checkedListBox1
             // 
+            this.checkedListBox1.CheckOnClick = true;
             this.checkedListBox1.FormattingEnabled = true;
             this.checkedListBox1.Items.AddRange(new object[] {
-            ""});
+            "Test mod"});
             this.checkedListBox1.Location = new System.Drawing.Point(485, 37);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(442, 769);
@@ -216,8 +217,6 @@ namespace Repentance_Configuration_Tool
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Checked = true;
-            this.checkBox2.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox2.Location = new System.Drawing.Point(6, 105);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(70, 21);
@@ -229,8 +228,6 @@ namespace Repentance_Configuration_Tool
             // checkBox3
             // 
             this.checkBox3.AutoSize = true;
-            this.checkBox3.Checked = true;
-            this.checkBox3.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox3.Location = new System.Drawing.Point(6, 130);
             this.checkBox3.Name = "checkBox3";
             this.checkBox3.Size = new System.Drawing.Size(100, 21);
@@ -253,8 +250,6 @@ namespace Repentance_Configuration_Tool
             // checkBox5
             // 
             this.checkBox5.AutoSize = true;
-            this.checkBox5.Checked = true;
-            this.checkBox5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox5.Location = new System.Drawing.Point(116, 157);
             this.checkBox5.Name = "checkBox5";
             this.checkBox5.Size = new System.Drawing.Size(152, 21);
@@ -266,8 +261,6 @@ namespace Repentance_Configuration_Tool
             // checkBox6
             // 
             this.checkBox6.AutoSize = true;
-            this.checkBox6.Checked = true;
-            this.checkBox6.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox6.Location = new System.Drawing.Point(116, 130);
             this.checkBox6.Name = "checkBox6";
             this.checkBox6.Size = new System.Drawing.Size(109, 21);
@@ -279,8 +272,6 @@ namespace Repentance_Configuration_Tool
             // checkBox7
             // 
             this.checkBox7.AutoSize = true;
-            this.checkBox7.Checked = true;
-            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
             this.checkBox7.Location = new System.Drawing.Point(116, 103);
             this.checkBox7.Name = "checkBox7";
             this.checkBox7.Size = new System.Drawing.Size(104, 21);
@@ -1049,7 +1040,12 @@ namespace Repentance_Configuration_Tool
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Items.AddRange(new object[] {
             "English",
-            "Japanese"});
+            "Japanese",
+            "Korean",
+            "Spanish",
+            "German",
+            "Russian",
+            "Simplified Chinese"});
             this.comboBox2.Location = new System.Drawing.Point(373, 718);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(88, 24);
@@ -1148,8 +1144,6 @@ namespace Repentance_Configuration_Tool
         }
 
         #endregion
-
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog2;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
@@ -1236,6 +1230,7 @@ namespace Repentance_Configuration_Tool
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox29;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
     }
 }
 

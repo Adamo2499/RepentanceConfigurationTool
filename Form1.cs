@@ -3,6 +3,7 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
+using System.Xml;
 
 namespace Repentance_Configuration_Tool
 {
@@ -166,16 +167,44 @@ namespace Repentance_Configuration_Tool
             comboBox2.SelectedIndex = 0;
             #endregion
             textBox1.Text = textBox1.Text.Replace("options.ini not found", "options.ini found");
-            /*
-            // To write array to file
-            string str = "";
-            for (int i = 0; i < 39; i++)
+            #region add mods to list
+            String modsPath = "";
+            checkedListBox1.Items.RemoveAt(0);
+            if (isaacLocation != null)
             {
-                str += "Numer lini: "+i+" "+optionsValues[i, 0] + ": " + optionsValues[i, 1]+Environment.NewLine;
+                modsPath = isaacLocation + "\\mods";
             }
-            //Write all text into file, but remember: path to file must be
-            File.WriteAllText("C:/Users/" + Environment.UserName + "/Desktop/optionsArray.txt", str);
-            */
+            else
+            {
+                MessageBox.Show("Select isaac-ng.exe!");
+            }
+                if(Directory.GetDirectories(modsPath) != null)
+                {
+                    string[] modList = Directory.GetDirectories(modsPath);
+                    for(int i = 0; i < modList.Length; i++)
+                    {
+                    String[] modFiles = Directory.GetFiles(modList[i]);
+                    for(int j = 0; j < modFiles.Length; j++) 
+                    {
+                        //modFiles[j].EndsWith("metadata.xml")
+                            if (modFiles[j].EndsWith("metadata.xml"))
+                            {
+                                String xmlLocation = modFiles[j];
+                                XmlTextReader xtr = new XmlTextReader(xmlLocation);
+                            while (xtr.Read())
+                            {
+                                if(xtr.NodeType == XmlNodeType.Element && xtr.Name == "name")
+                                {
+                                    string modName = xtr.ReadString();
+                                    checkedListBox1.Items.Add(modName, true);
+                                    break;
+                                }
+                            }
+                            }
+                        } 
+                    }
+                }
+            #endregion
         }
         private void openFileDialog2_FileOk(object sender, CancelEventArgs e)
         {
