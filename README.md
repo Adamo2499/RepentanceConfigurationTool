@@ -1,4 +1,4 @@
-# RepentanceConfigurationTool
+# The Binding of Isaac: Repentance - Configuration Tool
 
 [PL]
 
