@@ -3,7 +3,7 @@
 [PL]
 
 Narzędzie do konfiguracji oraz manager modów do gry [The Binding of Isaac: Repentance](https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/).
-Aplikacj pozwala na następujące operacje:
+Aplikacja pozwala na następujące operacje:
   - zniamę rozmiarów okna i jego pozycję na ekranie
   - włączenie / wyłączenie poszczególnych opcji HUDa gry (statystyki, posiadane itemy, pasek zdrowia bossów)
   - włączenie / wyłączenie konkretnych opcji gry (mody, synchronizacja zapisów gry z Steam Cloud, zatrzymanie gry po utracie focusa, pop-upy, kontrolanie postaci z wykorzystaniem myszki)
