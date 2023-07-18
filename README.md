@@ -12,3 +12,16 @@ Aplikacja pozwala na następujące operacje:
   - ustawienie głośności muzyki ooraz efektów dżwiękowych (SFX)
   - odczytanie i zapisanie ustawień do pliku
   - uruchomienie gry z ustawieniami
+
+[EN]
+
+Configuration tool and mod manager for [The Binding of Isaac: Repentance](https://store.steampowered.com/app/1426300/The_Binding_of_Isaac_Repentance/).
+The application allows the following operations:
+  - change the size of the window and its position on the screen
+  - enable/disable individual HUD options (stats, owned items, boss health bar)
+  - enable/disable specific game options (mods, synchronization of game saves with Steam Cloud, stopping the game after losing focus, pop-ups, controlling the character with the mouse)
+  - adjusting the development console available inside the game (turning on/off, adjusting the size of the text, saving the history of commands)
+  - game language setting (English, Japanese, Korean, Spanish, German, Russian, Chinese (Simplified))
+  - setting the volume of music and sound effects (SFX)
+  - reading and saving settings to a file
+  - launch the game with settings
